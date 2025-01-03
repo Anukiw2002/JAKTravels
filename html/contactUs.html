@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | JAK Travels</title>
+    <link rel="icon" type="image/png" href="/images/logoIcon.png" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css"
+    />
+    <link rel="stylesheet" href="../css/contactUs.css" />
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+    <div class="contact-page">
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">Contact Us</h1>
+          <p class="hero-subtitle">
+            Let's plan your perfect Sri Lankan adventure together
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Ready to Explore?</h2>
+            <p class="section-subtitle">
+              Our travel experts are here to craft your perfect Sri Lankan
+              journey
+            </p>
+          </div>
+          <div class="contact-wrapper">
+            <div class="contact-info">
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>123 Tourism Street, City Center</p>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <a
+                  href="https://wa.me/+94767666390"
+                  class="contact-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <p>+1 234 567 8900</p>
+                </a>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <a
+                  href="mailto:info@JAKTravels.onmicrosoft.com?source=website"
+                  class="contact-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <p>info@JAKTravels.onmicrosoft.com</p>
+                </a>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <p>Mon-Fri: 9:00 AM - 6:00 PM</p>
+              </div>
+              <div class="social-links">
+                <a href="#" aria-label="Facebook" class="social-link"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" aria-label="Twitter" class="social-link"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/jaktravelslk?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  class="social-link"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" aria-label="LinkedIn" class="social-link"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="contact-form">
+              <form action="https://formspree.io/f/xvggqvpn" method="POST">
+                <div class="form-group">
+                  <label for="name"
+                    >Your Name<span class="required">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="Enter your full name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email"
+                    >Your Email<span class="required">*</span></label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="Enter your email address"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="phone"
+                    >Phone Number<span class="required">*</span></label
+                  >
+                  <div class="phone-input-wrapper">
+                    <select id="countryCode" name="countryCode" required>
+                      <!-- This will be replaced by JavaScript -->
+                    </select>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      required
+                      placeholder="Enter your phone number"
+                      pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+                      class="phone-input"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="country"
+                    >Country<span class="required">*</span></label
+                  >
+                  <select id="country" name="country" required>
+                    <option value="">Select your country</option>
+                    <option value="US">United States</option>
+                    <option value="GB">United Kingdom</option>
+                    <option value="FR">France</option>
+                    <option value="DE">Germany</option>
+                    <option value="JP">Japan</option>
+                    <option value="CN">China</option>
+                    <option value="IN">India</option>
+                    <option value="AU">Australia</option>
+                    <option value="BR">Brazil</option>
+                    <option value="CA">Canada</option>
+                    <option value="IT">Italy</option>
+                    <option value="ES">Spain</option>
+                    <option value="NL">Netherlands</option>
+                    <option value="RU">Russia</option>
+                    <option value="KR">South Korea</option>
+                    <option value="SG">Singapore</option>
+                    <option value="AE">United Arab Emirates</option>
+                    <option value="ZA">South Africa</option>
+                    <option value="MX">Mexico</option>
+                    <option value="SE">Sweden</option>
+                    <option value="OTHER">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="Enter message subject"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                    placeholder="Enter your message"
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn">Send Message</button>
+                </div>
+                <div class="success-message" id="successMessage">
+                  Thank you for your message! We'll get back to you soon.
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <br />
+    <br />
+
+    <div id="footer-placeholder"></div>
+
+    <script src="/js/contactUs.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // First load the navbar
+        fetch("/html/navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("navbar-placeholder").innerHTML = data;
+            // Initialize navbar AFTER it's loaded
+            initializeNavbar();
+          });
+
+        fetch("/html/footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+          });
+
+        // Navbar initialization function
+        function initializeNavbar() {
+          const hamburger = document.querySelector(".hamburger");
+          const navLinks = document.querySelector(".nav-links");
+          const body = document.body;
+
+          if (!hamburger || !navLinks) {
+            console.error("Menu elements not found!");
+            return;
+          }
+
+          function toggleMenu() {
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active");
+            body.classList.toggle("menu-open");
+          }
+
+          // Toggle menu on hamburger click
+          hamburger.addEventListener("click", toggleMenu);
+
+          // Close menu when clicking a link
+          navLinks.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+              if (window.innerWidth <= 992) {
+                toggleMenu();
+              }
+            });
+          });
+
+          // Close menu when clicking outside
+          document.addEventListener("click", (e) => {
+            if (
+              window.innerWidth <= 992 &&
+              navLinks.classList.contains("active") &&
+              !navLinks.contains(e.target) &&
+              !hamburger.contains(e.target)
+            ) {
+              toggleMenu();
+            }
+          });
+
+          // Handle window resize
+          window.addEventListener("resize", () => {
+            if (
+              window.innerWidth > 992 &&
+              navLinks.classList.contains("active")
+            ) {
+              toggleMenu();
+            }
+          });
+        }
+      });
+
+      const countries = [
+        {
+          code: "+1",
+          name: "USA/Canada",
+          flag: "https://flagcdn.com/w40/us.png",
+        },
+        { code: "+44", name: "UK", flag: "https://flagcdn.com/w40/gb.png" },
+        { code: "+33", name: "France", flag: "https://flagcdn.com/w40/fr.png" },
+        {
+          code: "+49",
+          name: "Germany",
+          flag: "https://flagcdn.com/w40/de.png",
+        },
+        { code: "+81", name: "Japan", flag: "https://flagcdn.com/w40/jp.png" },
+        { code: "+86", name: "China", flag: "https://flagcdn.com/w40/cn.png" },
+        { code: "+91", name: "India", flag: "https://flagcdn.com/w40/in.png" },
+        {
+          code: "+61",
+          name: "Australia",
+          flag: "https://flagcdn.com/w40/au.png",
+        },
+        { code: "+55", name: "Brazil", flag: "https://flagcdn.com/w40/br.png" },
+        { code: "+7", name: "Russia", flag: "https://flagcdn.com/w40/ru.png" },
+        { code: "+39", name: "Italy", flag: "https://flagcdn.com/w40/it.png" },
+        { code: "+34", name: "Spain", flag: "https://flagcdn.com/w40/es.png" },
+        {
+          code: "+31",
+          name: "Netherlands",
+          flag: "https://flagcdn.com/w40/nl.png",
+        },
+        {
+          code: "+82",
+          name: "South Korea",
+          flag: "https://flagcdn.com/w40/kr.png",
+        },
+        {
+          code: "+65",
+          name: "Singapore",
+          flag: "https://flagcdn.com/w40/sg.png",
+        },
+        { code: "+971", name: "UAE", flag: "https://flagcdn.com/w40/ae.png" },
+        {
+          code: "+27",
+          name: "South Africa",
+          flag: "https://flagcdn.com/w40/za.png",
+        },
+        { code: "+52", name: "Mexico", flag: "https://flagcdn.com/w40/mx.png" },
+        { code: "+46", name: "Sweden", flag: "https://flagcdn.com/w40/se.png" },
+      ];
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const phoneInputWrapper = document.querySelector(
+          ".phone-input-wrapper"
+        );
+        const customSelectHTML = `
+        <div class="custom-select-wrapper">
+            <div class="custom-select">
+                <img src="${countries[0].flag}" alt="${countries[0].name} flag">
+                <span class="country-code">${countries[0].code}</span>
+            </div>
+            <div class="custom-select-options">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search country or code...">
+                </div>
+                <div class="options-container">
+                    ${countries
+                      .map(
+                        (country) => `
+                        <div class="custom-select-option" data-value="${
+                          country.code
+                        }" data-search="${country.name.toLowerCase()} ${
+                          country.code
+                        }">
+                            <img src="${country.flag}" alt="${
+                          country.name
+                        } flag">
+                            <span class="country-code">${country.code}</span>
+                            <span>${country.name}</span>
+                        </div>
+                    `
+                      )
+                      .join("")}
+                </div>
+                <div class="custom-option-divider">
+                    <span>OR</span>
+                </div>
+                <div class="custom-code-input-container">
+                    <input type="text" 
+                           class="custom-code-input" 
+                           placeholder="Enter your country code (e.g., +123)"
+                           pattern="\\+[0-9]+"
+                           maxlength="6">
+                </div>
+                <div class="no-results" style="display: none;">No matching countries found</div>
+            </div>
+            <input type="hidden" id="countryCode" name="countryCode" value="${
+              countries[0].code
+            }">
+        </div>
+    `;
+
+        // Replace the existing select with our custom one
+        const oldSelect = phoneInputWrapper.querySelector("select");
+        oldSelect.insertAdjacentHTML("beforebegin", customSelectHTML);
+        oldSelect.remove();
+
+        // Add event listeners
+        const customSelect = document.querySelector(".custom-select");
+        const customSelectOptions = document.querySelector(
+          ".custom-select-options"
+        );
+        const searchInput = document.querySelector(".search-input");
+        const optionsContainer = document.querySelector(".options-container");
+        const noResults = document.querySelector(".no-results");
+        const hiddenInput = document.querySelector("#countryCode");
+        const customCodeInput = document.querySelector(".custom-code-input");
+
+        // Toggle dropdown
+        customSelect.addEventListener("click", () => {
+          customSelectOptions.classList.toggle("show");
+          if (customSelectOptions.classList.contains("show")) {
+            searchInput.focus();
+          }
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener("click", (e) => {
+          if (
+            !customSelect.contains(e.target) &&
+            !customSelectOptions.contains(e.target)
+          ) {
+            customSelectOptions.classList.remove("show");
+            searchInput.value = "";
+            filterOptions("");
+          }
+        });
+
+        // Handle custom code input
+        customCodeInput.addEventListener("input", (e) => {
+          let value = e.target.value;
+
+          // Ensure the value starts with '+'
+          if (!value.startsWith("+")) {
+            value = "+" + value;
+            e.target.value = value;
+          }
+
+          // Remove any non-digit characters after the '+'
+          value = "+" + value.substring(1).replace(/[^0-9]/g, "");
+          e.target.value = value;
+
+          // Update hidden input and display
+          if (value.length > 1) {
+            hiddenInput.value = value;
+            customSelect.innerHTML = `
+                <span class="country-code custom-input">${value}</span>
+                <span class="custom-code-label">Custom</span>
+            `;
+
+            // Only close the dropdown if Enter is pressed or if we have a complete code (3 digits after +)
+            if (value.length >= 4) {
+              // +XXX format (4 characters total)
+              customSelectOptions.classList.remove("show");
+            }
+          }
+        });
+
+        // Add keydown event listener for Enter key
+        customCodeInput.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" && e.target.value.length > 1) {
+            customSelectOptions.classList.remove("show");
+          }
+        });
+
+        // Search functionality
+        function filterOptions(searchTerm) {
+          const options = document.querySelectorAll(".custom-select-option");
+          let hasResults = false;
+
+          options.forEach((option) => {
+            const searchData = option.dataset.search;
+            if (searchData.includes(searchTerm.toLowerCase())) {
+              option.style.display = "flex";
+              hasResults = true;
+            } else {
+              option.style.display = "none";
+            }
+          });
+
+          noResults.style.display = hasResults ? "none" : "block";
+        }
+
+        searchInput.addEventListener("input", (e) => {
+          filterOptions(e.target.value);
+        });
+
+        // Handle option selection
+        document.querySelectorAll(".custom-select-option").forEach((option) => {
+          option.addEventListener("click", () => {
+            const value = option.dataset.value;
+            const country = countries.find((c) => c.code === value);
+
+            // Update hidden input
+            hiddenInput.value = value;
+
+            // Update display
+            customSelect.innerHTML = `
+                <img src="${country.flag}" alt="${country.name} flag">
+                <span class="country-code">${country.code}</span>
+            `;
+
+            // Reset search and close dropdown
+            searchInput.value = "";
+            customCodeInput.value = "";
+            filterOptions("");
+            customSelectOptions.classList.remove("show");
+          });
+        });
+
+        // Prevent dropdown from closing when clicking on search input or custom code input
+        searchInput.addEventListener("click", (e) => {
+          e.stopPropagation();
+        });
+
+        customCodeInput.addEventListener("click", (e) => {
+          e.stopPropagation();
+        });
+      });
+    </script>
+    <script src="/js/chat.js"></script>
+  </body>
+</html>

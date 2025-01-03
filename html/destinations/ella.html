@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover Ella - JAK Travels</title>
+    <link rel="icon" type="image/png" href="/images/logoIcon.png" />
+    <link rel="stylesheet" href="/css/destination details.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+    <div class="parallax-hero">
+      <div
+        class="parallax-layer"
+        style="background-image: url('/images/Ella/EllaTrain.jpg')"
+      ></div>
+      <div class="hero-content">
+        <h1 class="hero-title">Experience Ella</h1>
+        <p class="hero-subtitle">Where misty mountains meet colonial charm</p>
+      </div>
+    </div>
+
+    <section class="overview-section">
+      <div class="overview-container">
+        <div class="overview-content">
+          <h2 class="section-title">Discover Ella</h2>
+          <br />
+          <br />
+
+          <p>
+            Welcome to Ella, a breathtaking mountain paradise nestled in the
+            heart of Sri Lanka's Hill Country. Let us guide you through this
+            enchanting destination where every corner tells a story and every
+            view captures your heart.
+          </p>
+          <br />
+          <p>Our expertly crafted tours include:</p>
+          <br />
+          <ul>
+            <li>Scenic train journeys through tea plantations</li>
+            <li>Guided hikes to spectacular viewpoints</li>
+            <li>Photography sessions at the iconic Nine Arch Bridge</li>
+            <li>Authentic local experiences and cuisine</li>
+            <li>Comfortable accommodations with mountain views</li>
+          </ul>
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31736.129220673596!2d81.02899185!3d6.8666125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae465d179d6d59f%3A0x1f2047d5c9fe2d88!2sElla%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1701856247688!5m2!1sen!2sus"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">Must-Visit Destinations</h2>
+        <p class="section-subtitle">
+          Explore the most scenic locations in Ella with our expert guides
+        </p>
+      </div>
+
+      <div class="highlights-grid">
+        <div class="destination-card">
+          <img
+            src="/images/Ella/Nine arch bridge.jpg"
+            alt="Nine Arch Bridge"
+            class="destination-image"
+          />
+          <div class="destination-content">
+            <h3 class="destination-title">Nine Arch Bridge</h3>
+            <p>
+              Marvel at this architectural masterpiece spanning 91 meters across
+              lush tea plantations. Our guides know the perfect spots and times
+              for photographs.
+            </p>
+          </div>
+        </div>
+
+        <div class="destination-card">
+          <img
+            src="/images/Ella/Ella Rock.jpg"
+            alt="Ella Rock"
+            class="destination-image"
+          />
+          <div class="destination-content">
+            <h3 class="destination-title">Ella Rock</h3>
+            <p>
+              Experience an unforgettable sunrise hike with our experienced
+              guides. Enjoy breathtaking panoramic views of the Ella Gap and
+              surrounding mountains.
+            </p>
+          </div>
+        </div>
+
+        <div class="destination-card">
+          <img
+            src="/images/little Adam's peak.jpg"
+            alt="Little Adam's Peak"
+            class="destination-image"
+          />
+          <div class="destination-content">
+            <h3 class="destination-title">Little Adam's Peak</h3>
+            <p>
+              Take an accessible hike to stunning viewpoints. Perfect for both
+              sunrise and sunset photography, with professional guidance from
+              our team.
+            </p>
+          </div>
+        </div>
+
+        <div class="destination-card">
+          <img
+            src="/images/Ravana Cave.jpg"
+            alt="Little Adam's Peak"
+            class="destination-image"
+          />
+          <div class="destination-content">
+            <h3 class="destination-title">Ravana Cave</h3>
+            <p>
+              A mysterious cave tied to the Ramayana legend, perfect for history
+              enthusiasts.
+            </p>
+          </div>
+        </div>
+
+        <div class="destination-card">
+          <img
+            src="/images/Ella/Ravana Falls.jpg"
+            alt="Ravana Falls"
+            class="destination-image"
+          />
+          <div class="destination-content">
+            <h3 class="destination-title">Ravana Falls</h3>
+            <p>
+              Visit this majestic waterfall with its rich mythology. Our guides
+              will share ancient legends while you capture perfect photos.
+            </p>
+          </div>
+        </div>
+
+        <div class="destination-card">
+          <img
+            src="/images/Ella Gap.jpg"
+            alt="Ravana Falls"
+            class="destination-image"
+          />
+          <div class="destination-content">
+            <h3 class="destination-title">Ella Gap</h3>
+            <p>
+              A breathtaking view through a gap in the hills, offering stunning
+              vistas of the lowlands. Best at sunrise or sunset.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="footer-placeholder"></div>
+
+    <script>
+      // Parallax Effect
+      window.addEventListener("scroll", () => {
+        const parallax = document.querySelector(".parallax-layer");
+        let scrollPosition = window.pageYOffset;
+        let scale = 1 + scrollPosition * 0.0003;
+        parallax.style.transform = `translateY(${
+          scrollPosition * 0.5
+        }px) scale(${scale})`;
+      });
+
+      // Scroll Animation
+      const cards = document.querySelectorAll(".destination-card");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      cards.forEach((card) => observer.observe(card));
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // First load the navbar
+        fetch("/html/navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("navbar-placeholder").innerHTML = data;
+            // Initialize navbar AFTER it's loaded
+            initializeNavbar();
+          });
+
+        fetch("/html/footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+          });
+
+        // Navbar initialization function
+        function initializeNavbar() {
+          const hamburger = document.querySelector(".hamburger");
+          const navLinks = document.querySelector(".nav-links");
+          const body = document.body;
+
+          if (!hamburger || !navLinks) {
+            console.error("Menu elements not found!");
+            return;
+          }
+
+          function toggleMenu() {
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active");
+            body.classList.toggle("menu-open");
+          }
+
+          // Toggle menu on hamburger click
+          hamburger.addEventListener("click", toggleMenu);
+
+          // Close menu when clicking a link
+          navLinks.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+              if (window.innerWidth <= 992) {
+                toggleMenu();
+              }
+            });
+          });
+
+          // Close menu when clicking outside
+          document.addEventListener("click", (e) => {
+            if (
+              window.innerWidth <= 992 &&
+              navLinks.classList.contains("active") &&
+              !navLinks.contains(e.target) &&
+              !hamburger.contains(e.target)
+            ) {
+              toggleMenu();
+            }
+          });
+
+          // Handle window resize
+          window.addEventListener("resize", () => {
+            if (
+              window.innerWidth > 992 &&
+              navLinks.classList.contains("active")
+            ) {
+              toggleMenu();
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

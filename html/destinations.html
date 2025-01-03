@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popular Destinations - JAK Travels</title>
+    <link rel="icon" type="image/png" href="/images/logoIcon.png" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../css/destinations.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+    <section class="hero">
+      <img
+        src="../images/Hero image.jpg"
+        alt="Sri Lanka Landscape"
+        class="hero-image"
+      />
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">Welcome to Sri Lanka</h1>
+        <p class="hero-subtitle">
+          Discover the endless wonders of our tropical paradise
+        </p>
+      </div>
+      <div class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+    <br />
+    <br />
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h1 class="section-title">Discover Sri Lanka</h1>
+          <p class="section-subtitle">
+            Explore the pearl of the Indian Ocean - from ancient cities to misty
+            mountains
+          </p>
+        </div>
+
+        <div class="filter-container">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="beach">Beaches</button>
+          <button class="filter-btn" data-filter="culture">Cultural</button>
+          <button class="filter-btn" data-filter="nature">Nature</button>
+          <button class="filter-btn" data-filter="wildlife">Wildlife</button>
+        </div>
+
+        <div class="grid grid-3 destination-grid">
+          <!-- Destinations will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+    <br />
+    <br />
+    <div id="footer-placeholder"></div>
+
+    <script>
+      const destinations = [
+        {
+          name: "Ella",
+          description:
+            "A picturesque mountain village famous for its Nine Arch Bridge, tea plantations, and hiking trails with breathtaking views.",
+          image: "/images/Ella.jpg",
+          tags: ["nature"],
+          link: "/html/destinations/ella.html",
+        },
+        {
+          name: "Galle",
+          description:
+            "Historic coastal city with a UNESCO World Heritage fort, featuring Dutch colonial architecture, artisan shops, and beautiful beaches.",
+          image: "/images/Galle2.jpg",
+          tags: ["culture", "beach"],
+          link: "/html/destinations/galle.html",
+        },
+        {
+          name: "Anuradhapura",
+          description:
+            "Ancient city with well-preserved ruins of Sri Lankan civilization, including sacred Buddhist sites and magnificent stupas.",
+          image:
+            "/images/anuradhapura_unesco_world_heritage_site_jethawana_monastery.jpg",
+          tags: ["culture", "history"],
+          link: "/html/destinations/anuradhapura.html",
+        },
+        {
+          name: "Sigiriya",
+          description:
+            "Ancient palace complex atop a massive rock, featuring stunning frescoes, water gardens, and panoramic views.",
+          image: "/images/Sigiriya2.jpg",
+          tags: ["culture", "history"],
+          link: "/html/destinations/sigiriya.html",
+        },
+        {
+          name: "Minneriya",
+          description:
+            "National park famous for its large gatherings of Asian elephants and diverse wildlife amid beautiful landscapes.",
+          image: "/images/Minneriya National Park - Elephants-02.jpg",
+          tags: ["wildlife", "nature"],
+          link: "/html/destinations/minneriya.html",
+        },
+        {
+          name: "Yala",
+          description:
+            "Sri Lanka's most popular wildlife park, home to leopards, elephants, crocodiles, and numerous bird species.",
+          image: "/images/Yala Safari.jpg",
+          tags: ["wildlife", "nature"],
+          link: "/html/destinations/yala.html",
+        },
+        {
+          name: "Nuwara Eliya",
+          description:
+            "Hill country retreat known for its tea plantations, cool climate, and colonial architecture, often called 'Little England'.",
+          image: "/images/NuwaraEliya.jpg",
+          tags: ["nature", "culture"],
+          link: "/html/destinations/nuwara eliya.html",
+        },
+        {
+          name: "Kandy",
+          description:
+            "Cultural capital of Sri Lanka, home to the Temple of the Tooth Relic, beautiful lake, and traditional arts.",
+          image: "/images/Kandy.jpg",
+          tags: ["culture", "history"],
+          link: "/html/destinations/kandy.html",
+        },
+        {
+          name: "Mirissa",
+          description:
+            "Tropical beach paradise known for whale watching, surfing, and stunning sunsets along the southern coast.",
+          image: "/images/Mirissa.jpg",
+          tags: ["beach", "wildlife"],
+          link: "/html/destinations/mirissa.html",
+        },
+      ];
+
+      function createDestinationCard(destination) {
+        return `
+          <a href="${destination.link}" class="destination-card">
+            <img src="${destination.image}" alt="${
+          destination.name
+        }" class="destination-image">
+            <div class="destination-content">
+              <h3 class="destination-title">${destination.name}</h3>
+              <p class="destination-description">${destination.description}</p>
+              <div class="tags">
+                ${destination.tags
+                  .map((tag) => `<span class="tag">${tag}</span>`)
+                  .join("")}
+              </div>
+            </div>
+          </a>
+        `;
+      }
+
+      function renderDestinations(filter = "all") {
+        const grid = document.querySelector(".destination-grid");
+        grid.style.opacity = "0";
+
+        setTimeout(() => {
+          const filteredDestinations =
+            filter === "all"
+              ? destinations
+              : destinations.filter((dest) => dest.tags.includes(filter));
+
+          grid.innerHTML = filteredDestinations
+            .map(createDestinationCard)
+            .join("");
+
+          grid.style.opacity = "1";
+        }, 300);
+      }
+
+      // Initialize page
+      renderDestinations();
+
+      // Filter buttons functionality
+      document.querySelectorAll(".filter-btn").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          document
+            .querySelectorAll(".filter-btn")
+            .forEach((b) => b.classList.remove("active"));
+          e.target.classList.add("active");
+          renderDestinations(e.target.dataset.filter);
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // First load the navbar
+        fetch("/html/navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("navbar-placeholder").innerHTML = data;
+            // Initialize navbar AFTER it's loaded
+            initializeNavbar();
+          });
+
+        fetch("/html/footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+          });
+
+        // Navbar initialization function
+        function initializeNavbar() {
+          const hamburger = document.querySelector(".hamburger");
+          const navLinks = document.querySelector(".nav-links");
+          const body = document.body;
+
+          if (!hamburger || !navLinks) {
+            console.error("Menu elements not found!");
+            return;
+          }
+
+          function toggleMenu() {
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active");
+            body.classList.toggle("menu-open");
+          }
+
+          // Toggle menu on hamburger click
+          hamburger.addEventListener("click", toggleMenu);
+
+          // Close menu when clicking a link
+          navLinks.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+              if (window.innerWidth <= 992) {
+                toggleMenu();
+              }
+            });
+          });
+
+          // Close menu when clicking outside
+          document.addEventListener("click", (e) => {
+            if (
+              window.innerWidth <= 992 &&
+              navLinks.classList.contains("active") &&
+              !navLinks.contains(e.target) &&
+              !hamburger.contains(e.target)
+            ) {
+              toggleMenu();
+            }
+          });
+
+          // Handle window resize
+          window.addEventListener("resize", () => {
+            if (
+              window.innerWidth > 992 &&
+              navLinks.classList.contains("active")
+            ) {
+              toggleMenu();
+            }
+          });
+        }
+      });
+    </script>
+    <script src="/js/chat.js"></script>
+    </a>
+  </body>
+</html>
