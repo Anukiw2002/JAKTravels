@@ -363,13 +363,24 @@
 }
 
 @media (min-aspect-ratio: 16/9) {
-  .background-video iframe {
-    height: 56.25vw;
+  #player {
+    width: 100vw;
+    height: calc(100vw * 9 / 16); /* maintain 16:9 ratio */
   }
 }
 
+/* For screens taller than they are wide (portrait) */
 @media (max-aspect-ratio: 16/9) {
-  .background-video iframe {
-    width: 177.78vh;
+  #player {
+    width: calc(100vh * 16 / 9); /* maintain 16:9 ratio */
+    height: 100vh;
+  }
+}
+
+/* Additional mobile-specific adjustments */
+@media (max-width: 768px) {
+  #player {
+    width: 300vw; /* Extra wide to ensure coverage */
+    height: 300vh;
   }
 }
