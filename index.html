@@ -682,6 +682,49 @@
             observer.observe(element);
           });
       });
+      // Load the YouTube API
+      var tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName("script")[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // Create YouTube Player
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player("player", {
+          videoId: "FJmfdFJ2DOY", // Your video ID
+          playerVars: {
+            autoplay: 1,
+            loop: 1,
+            playlist: "FJmfdFJ2DOY", // Required for looping
+            controls: 0,
+            showinfo: 0,
+            rel: 0,
+            mute: 1,
+            playsinline: 1,
+            modestbranding: 1,
+            fs: 0,
+            iv_load_policy: 3, // Disable annotations
+            disablekb: 1, // Disable keyboard controls
+          },
+          events: {
+            onReady: onPlayerReady,
+            onStateChange: onPlayerStateChange,
+          },
+        });
+      }
+
+      function onPlayerReady(event) {
+        event.target.playVideo();
+        // Hide fallback image once video starts playing
+        document.querySelector(".fallback-image").style.opacity = "0";
+      }
+
+      function onPlayerStateChange(event) {
+        if (event.data === YT.PlayerState.ENDED) {
+          player.playVideo(); // Ensure continuous looping
+        }
+      }
     </script>
     <script src="/js/landing-welcome.js"></script>
     <script src="/js/landing-WhyChooseUs.js"></script>

@@ -9,17 +9,12 @@
     <div id="navbar-placeholder"></div>
     <div class="hero">
       <div class="hero-background">
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="auto"
-          poster="/images/Sigiriya2.jpg"
-          class="background-video"
-        >
-          <source src="/images/video.mp4" type="video/mp4" />
-        </video>
+        <div id="player" class="background-video"></div>
+        <!-- Fallback image that will show until the video loads -->
+        <div
+          class="fallback-image"
+          style="background-image: url('/images/Sigiriya2.jpg')"
+        ></div>
       </div>
       <div class="hero-overlay"></div>
       <div class="floating-elements" aria-hidden="true">
