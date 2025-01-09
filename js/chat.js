@@ -54,7 +54,7 @@ chatStyles.textContent = `
 
 // Create WhatsApp button
 const whatsappBtn = document.createElement("a");
-whatsappBtn.href = "https://wa.me/94767666390"; // Replace with your number
+whatsappBtn.href = "https://wa.me/94705924395"; // Replace with your number
 whatsappBtn.className = "whatsapp-btn";
 whatsappBtn.target = "_blank";
 whatsappBtn.innerHTML = `
