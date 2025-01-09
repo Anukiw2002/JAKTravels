@@ -1,0 +1,7 @@
+defaults:
+  - scope:
+      path: "**/*.mp4"
+    values:
+      video_type: "video/mp4"
+
+include: ["_*.mp4"]
