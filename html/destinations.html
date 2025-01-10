@@ -4,13 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Popular Destinations - JAK Travels</title>
-    <link rel="icon" type="image/png" href="/images/logoIcon.png" />
+    <meta name="description" content="Explore Sri Lanka's most popular destinations including beaches, cultural sites, and wildlife sanctuaries." />
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="../styles.css" as="style" />
+    <link rel="preload" href="../css/destinations.css" as="style" />
+    <link rel="preload" href="../images/Hero image.jpg" as="image" />
+    
+    <!-- Defer non-critical CSS -->
     <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="../css/destinations.css" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'" />
+    
+    <link rel="icon" type="image/png" href="/images/logoIcon.png" />
   </head>
   <body>
     <div id="navbar-placeholder"></div>
@@ -19,6 +25,9 @@
         src="../images/Hero image.jpg"
         alt="Sri Lanka Landscape"
         class="hero-image"
+        loading="eager"
+        width="1920"
+        height="1080"
       />
       <div class="hero-overlay"></div>
       <div class="hero-content">
@@ -31,8 +40,7 @@
         <i class="fas fa-chevron-down"></i>
       </div>
     </section>
-    <br />
-    <br />
+
     <section class="section">
       <div class="container">
         <div class="section-header">

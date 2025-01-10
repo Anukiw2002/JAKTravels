@@ -151,7 +151,40 @@
   </head>
   <body>
     <div id="navbar-placeholder"></div>
-    <div id="hero-placeholder"></div>
+    <!--
+    <div id="hero-placeholder"></div> -->
+
+    <div class="hero">
+      <div class="hero-background">
+        <div id="player" class="background-video"></div>
+        <!-- Fallback image that will show until the video loads -->
+        <div
+          class="fallback-image"
+          style="background-image: url('/images/Sigiriya2.jpg')"
+        ></div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="floating-elements" aria-hidden="true">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">Discover Sri Lanka</h1>
+        <p class="hero-subtitle">Experience the Wonder of Paradise</p>
+        <button
+          class="cta-button"
+          onclick="window.location.href='/html/tours.html'"
+        >
+          Explore Package
+        </button>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+      </div>
+    </div>
 
     <!-- Welcome Section -->
     <section class="welcome-section" aria-label="Welcome to JAK Travels">
@@ -725,6 +758,40 @@
           player.playVideo(); // Ensure continuous looping
         }
       }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const hero = document.querySelector(".hero");
+        let lastScrollY = window.scrollY;
+
+        // Parallax effect on scroll
+        window.addEventListener("scroll", () => {
+          const scrollY = window.scrollY;
+          const speed = 0.5;
+          const offset = (scrollY - lastScrollY) * speed;
+
+          if (scrollY <= hero.offsetHeight) {
+            hero.style.backgroundPositionY = `${offset}px`;
+          }
+
+          lastScrollY = scrollY;
+        });
+
+        // Add click animation to CTA button
+        const ctaButton = document.querySelector(".cta-button");
+        ctaButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          this.style.transform = "scale(0.95)";
+          setTimeout(() => {
+            this.style.transform = "";
+          }, 200);
+        });
+      });
+
+      fetch("/html/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+        });
     </script>
     <script src="/js/landing-welcome.js"></script>
     <script src="/js/landing-WhyChooseUs.js"></script>
