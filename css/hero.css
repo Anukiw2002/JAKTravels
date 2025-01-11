@@ -38,6 +38,9 @@
   height: 100%;
   background-size: cover;
   background-position: center;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+  animation: subtle-zoom 30s ease-in-out infinite;
 }
 
 .hero-overlay {
@@ -204,7 +207,7 @@
   opacity: 1;
 }
 
-@keyframes heroBackground {
+@keyframes subtle-zoom {
   0% {
     transform: scale(1) translate(0, 0);
     filter: brightness(0.9) saturate(1);
