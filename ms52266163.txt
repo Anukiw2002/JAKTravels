@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "jaktravels.lk",
+  "Id": "2243ed1f-bb4e-4e03-8875-93a6de609f49"
+}
