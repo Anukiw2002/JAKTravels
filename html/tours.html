@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tour Packages - JAK Travels</title>
+    <title>Explore Sri Lanka Tour Packages | JAK Travels Adventures</title>
+
     <meta
       name="description"
       content="Discover handcrafted Sri Lanka tour packages featuring wildlife safaris, cultural experiences, and beach escapes. Choose from 9-12 day adventures with expert guides and luxury stays."
@@ -20,6 +21,20 @@
     />
     <meta property="og:image" content="/images/Tours.jpg" />
     <meta property="og:url" content="https://jaktravels.com/tour-packages" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Sri Lanka Tour Packages | JAK Travels"
+    />
+    <meta
+      name="twitter:description"
+      content="Embark on custom Sri Lankan adventures including safaris, heritage tours, and beach holidays."
+    />
+    <meta name="twitter:image" content="/images/Tours.jpg" />
+
     <link rel="icon" type="image/png" href="/images/logoIcon.png" />
     <link rel="stylesheet" href="/styles.css" />
     <link rel="stylesheet" href="/css/landing-packages.css" />
@@ -28,6 +43,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preload" href="/css/tours.css" as="style" />
     <!-- Schema.org Markup -->
     <script type="application/ld+json">
       {
@@ -47,7 +64,11 @@
           "lowPrice": "500",
           "highPrice": "3000",
           "priceCurrency": "USD"
-        }
+        },
+        "sameAs": [
+          "https://www.facebook.com/jaktravels",
+          "https://www.instagram.com/jaktravels"
+        ]
       }
     </script>
   </head>
@@ -64,6 +85,12 @@
     gtag("js", new Date());
 
     gtag("config", "G-YGJ19BMZTJ");
+    function trackPackageClick(packageName) {
+      gtag("event", "package_click", {
+        event_category: "Tours",
+        event_label: packageName,
+      });
+    }
   </script>
   <body>
     <div id="navbar-placeholder"></div>
@@ -102,7 +129,11 @@
         <div class="package-card" style="--card-index: 0">
           <div class="best-seller">BEST SELLER</div>
           <div class="package-image">
-            <img src="/images/Ella.jpg" alt="Enchanting Sri Lanka" />
+            <img
+              src="/images/Ella.jpg"
+              alt="Breathtaking view of Ella's misty mountains during Sri Lankan tour"
+              loading="lazy"
+            />
             <div class="duration-badge">12 Days / 11 Nights</div>
           </div>
           <div class="package-content">
@@ -121,7 +152,7 @@
               <div class="price"></div>
               <button
                 class="explore-btn"
-                onclick="window.location.href='/html/packages/classic.html'"
+                onclick="trackPackageClick('Enchanting Sri Lanka')"
               >
                 Explore Package
               </button>
@@ -133,7 +164,11 @@
 
         <div class="package-card">
           <div class="package-image">
-            <img src="/images/Saafri Package.jpg" alt="Wildlife Wonders" />
+            <img
+              src="/images/Saafri Package.jpg"
+              alt="Wildlife Wonders"
+              loading="lazy"
+            />
             <div class="duration-badge">10 Days / 9 Nights</div>
           </div>
           <div class="package-content">
@@ -163,7 +198,11 @@
         <!-- Nature Package -->
         <div class="package-card">
           <div class="package-image">
-            <img src="/images/Sinharaja.jpg" alt="Wildlife & Nature" />
+            <img
+              src="/images/Sinharaja.jpg"
+              alt="Wildlife & Nature"
+              loading="lazy"
+            />
             <div class="duration-badge">11 Days / 10 Nights</div>
           </div>
           <div class="package-content">
@@ -193,7 +232,11 @@
         <!-- East Coast Package -->
         <div class="package-card">
           <div class="package-image">
-            <img src="/images/beach.jpg" alt="East Coast Escape" />
+            <img
+              src="/images/beach.jpg"
+              alt="East Coast Escape"
+              loading="lazy"
+            />
             <div class="duration-badge">11 Days / 10 Nights</div>
           </div>
           <div class="package-content">
@@ -224,7 +267,7 @@
         <!-- Adventure Package -->
         <div class="package-card">
           <div class="package-image">
-            <img src="/images/Camping.jpg" alt="Camping" />
+            <img src="/images/Camping.jpg" alt="Camping" loading="lazy" />
             <div class="duration-badge">9 Days / 8 Nights</div>
           </div>
           <div class="package-content">
@@ -255,7 +298,11 @@
         <!-- Custom Package -->
         <div class="package-card">
           <div class="package-image">
-            <img src="/images/heritage.jpg" alt="Custom Adventure" />
+            <img
+              src="/images/heritage.jpg"
+              alt="Custom Adventure"
+              loading="lazy"
+            />
             <div class="duration-badge">Flexible Duration</div>
           </div>
           <div class="package-content">
@@ -390,5 +437,17 @@
       });
     </script>
     <script src="/js/chat.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".explore-btn").forEach(function (button) {
+          button.addEventListener("click", function () {
+            gtag("event", "Explore Package Click", {
+              event_category: "Tours Page",
+              event_label: button.innerText.trim(),
+            });
+          });
+        });
+      });
+    </script>
   </body>
 </html>
