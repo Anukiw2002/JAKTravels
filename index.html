@@ -17,7 +17,7 @@
     />
     <meta
       name="keywords"
-      content="Sri Lanka tours, Sri Lankan travel, cultural tours, wildlife safaris, beach holidays, mountain treks, custom tours, luxury travel Sri Lanka"
+      content="Sri Lanka tours, Sri Lankan travel, cultural tours, wildlife safaris, beach holidays, mountain treks, custom tours, luxury travel Sri Lanka, adventure travel, eco-tourism, cultural experiences, island tours, best travel agent in Sri Lanka, Sri Lanka Tour, Vacation in Sri Lanka"
     />
     <meta name="author" content="JAK Travels" />
     <meta
@@ -25,6 +25,20 @@
       content="https://jaktravels.lk/images/SriLanka.jpg"
     />
     <meta name="robots" content="index, follow" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="JAK Travels - Authentic Sri Lankan Travel Experiences & Tours"
+    />
+    <meta
+      name="twitter:description"
+      content="Discover Sri Lanka with JAK Travels. Expert-led tours featuring cultural heritage sites, wildlife safaris, pristine beaches, and mountain adventures. Customized itineraries with local insights."
+    />
+    <meta
+      name="twitter:image"
+      content="https://jaktravels.lk/images/SriLanka.jpg"
+    />
 
     <link rel="icon" type="image/png" href="/images/logoIcon.png" />
     <link rel="preconnect" href="https://www.youtube.com" />
@@ -41,6 +55,7 @@
     <link rel="stylesheet" href="/css/landing-packages.css" />
     <link rel="stylesheet" href="/css/landing-gallery.css" />
     <link rel="dns-prefetch" href="https://www.youtube.com" />
+    <link rel="preload" href="/images/Sigiriya2.jpg" as="image" />
     <style>
       /* Base animation classes */
       .scroll-reveal {
@@ -166,10 +181,21 @@
         "name": "JAK Travels",
         "url": "https://jaktravels.lk",
         "logo": "https://jaktravels.lk/images/logoIcon.png",
+        "description": "Expert-led Sri Lankan tours featuring cultural, wildlife, and adventure experiences",
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+94-705924395",
-          "contactType": "Customer Service"
+          "contactType": "Customer Service",
+          "availableLanguage": "English"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "LK"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "7.8731",
+          "longitude": "80.7718"
         }
       }
     </script>
@@ -359,7 +385,7 @@
             <div class="package-image">
               <img
                 src="/images/Ella.jpg"
-                alt="Enchanting Sri Lanka"
+                alt="Scenic view of Ella's lush green mountains and tea plantations in Sri Lanka"
                 loading="lazy"
               />
               <div class="duration-badge">12 Days / 11 Nights</div>
@@ -393,7 +419,7 @@
             <div class="package-image">
               <img
                 src="/images/Saafri Package.jpg"
-                alt="Wildlife Wonders"
+                alt="Sri Lankan safari jeep exploring Yala National Park with wild elephants and lush landscape"
                 loading="lazy"
               />
               <div class="duration-badge">10 Days / 9 Nights</div>
@@ -426,7 +452,7 @@
             <div class="package-image">
               <img
                 src="/images/Sinharaja.jpg"
-                alt="Wildlife & Nature"
+                alt="Lush Sinharaja Rainforest with dense tropical vegetation and endemic wildlife"
                 loading="lazy"
               />
               <div class="duration-badge">11 Days / 10 Nights</div>
@@ -460,7 +486,7 @@
             <div class="package-image">
               <img
                 src="/images/beach.jpg"
-                alt="East Coast Escape"
+                alt="Pristine eastern Sri Lankan coastline with turquoise waters and golden sandy beaches near Trincomalee"
                 loading="lazy"
               />
               <div class="duration-badge">11 Days / 10 Nights</div>
@@ -492,7 +518,11 @@
 
           <div class="package-card">
             <div class="package-image">
-              <img src="/images/Camping.jpg" alt="Camping" loading="lazy" />
+              <img
+                src="/images/Camping.jpg"
+                alt="Cyclists camping in Wilpattu National Park with tents and bicycles against a scenic wilderness backdrop"
+                loading="lazy"
+              />
               <div class="duration-badge">9 Days / 8 Nights</div>
             </div>
             <div class="package-content">
@@ -525,7 +555,7 @@
             <div class="package-image">
               <img
                 src="/images/heritage.jpg"
-                alt="Custom Adventure"
+                alt="Ancient Sri Lankan cultural sites featuring UNESCO World Heritage temples and historical landmarks"
                 loading="lazy"
               />
               <div class="duration-badge">Flexible Duration</div>
@@ -581,7 +611,7 @@
             <div class="slide active">
               <img
                 src="/images/Tea Plucking 02.jpg"
-                alt="Sigiriya Rock Fortress"
+                alt="Traditional tea plucking in Sri Lanka's misty highland plantations with workers harvesting green tea leaves"
                 loading="lazy"
               />
               <div class="slide-caption">
@@ -590,7 +620,11 @@
               </div>
             </div>
             <div class="slide">
-              <img src="/images/img3.jpg" alt="Tropical Beach" loading="lazy" />
+              <img
+                src="/images/img3.jpg"
+                alt="Wild elephants gathering at Minneriya National Park during Sri Lanka's annual elephant migration"
+                loading="lazy"
+              />
               <div class="slide-caption">
                 <h3>Elephant Paradise</h3>
                 <p>
@@ -601,7 +635,7 @@
             <div class="slide">
               <img
                 src="/images/Watter Fall 02.jpg"
-                alt="Tropical Beach"
+                alt="Stunning 63-meter Diyaluma waterfall cascading through lush Sri Lankan tropical rainforest"
                 loading="lazy"
               />
               <div class="slide-caption">
@@ -612,7 +646,7 @@
             <div class="slide">
               <img
                 src="/images/Koggala Beach - Stilt Fishing.jpg"
-                alt="Wildlife"
+                alt="Traditional Sri Lankan stilt fishermen perched on wooden poles at sunset near Koggala Beach"
                 loading="lazy"
               />
               <div class="slide-caption">
@@ -872,9 +906,9 @@
         });
     </script>
     <script src="/js/landing-welcome.js"></script>
-    <script src="/js/landing-WhyChooseUs.js"></script>
-    <script src="/js/landing-packages.js"></script>
-    <script src="/js/landing-gallery.js"></script>
+    <script src="/js/landing-WhyChooseUs.js" defer></script>
+    <script src="/js/landing-packages.js" defer></script>
+    <script src="/js/landing-gallery.js" defer></script>
     <script src="/js/chat.js"></script>
   </body>
 </html>
