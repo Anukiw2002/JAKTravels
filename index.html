@@ -20,7 +20,16 @@
       content="Sri Lanka tours, Sri Lankan travel, cultural tours, wildlife safaris, beach holidays, mountain treks, custom tours, luxury travel Sri Lanka"
     />
     <meta name="author" content="JAK Travels" />
+    <meta
+      property="og:image"
+      content="https://jaktravels.lk/images/SriLanka.jpg"
+    />
+    <meta name="robots" content="index, follow" />
+
     <link rel="icon" type="image/png" href="/images/logoIcon.png" />
+    <link rel="preconnect" href="https://www.youtube.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -153,11 +162,34 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "TravelAgency",
         "name": "JAK Travels",
         "url": "https://jaktravels.lk",
-        "logo": "https://jaktravels.lk/images/logoIcon.png"
+        "logo": "https://jaktravels.lk/images/logoIcon.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+94-705924395",
+          "contactType": "Customer Service"
+        }
       }
+    </script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXX-X"
+    ></script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YGJ19BMZTJ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-YGJ19BMZTJ");
     </script>
   </head>
   <body>
@@ -325,7 +357,11 @@
           <div class="package-card" style="--card-index: 0">
             <div class="best-seller">BEST SELLER</div>
             <div class="package-image">
-              <img src="/images/Ella.jpg" alt="Enchanting Sri Lanka" />
+              <img
+                src="/images/Ella.jpg"
+                alt="Enchanting Sri Lanka"
+                loading="lazy"
+              />
               <div class="duration-badge">12 Days / 11 Nights</div>
             </div>
             <div class="package-content">
@@ -343,8 +379,9 @@
               <div class="package-footer">
                 <div class="price"></div>
                 <button
-                  class="explore-btn"
-                  onclick="window.location.href='/html/packages/classic.html'"
+                  class="cta-button"
+                  aria-label="Explore available travel packages"
+                  onclick="window.location.href='/html/tours.html'"
                 >
                   Explore Packages
                 </button>
@@ -354,7 +391,11 @@
 
           <div class="package-card">
             <div class="package-image">
-              <img src="/images/Saafri Package.jpg" alt="Wildlife Wonders" />
+              <img
+                src="/images/Saafri Package.jpg"
+                alt="Wildlife Wonders"
+                loading="lazy"
+              />
               <div class="duration-badge">10 Days / 9 Nights</div>
             </div>
             <div class="package-content">
@@ -383,7 +424,11 @@
 
           <div class="package-card">
             <div class="package-image">
-              <img src="/images/Sinharaja.jpg" alt="Wildlife & Nature" />
+              <img
+                src="/images/Sinharaja.jpg"
+                alt="Wildlife & Nature"
+                loading="lazy"
+              />
               <div class="duration-badge">11 Days / 10 Nights</div>
             </div>
             <div class="package-content">
@@ -413,7 +458,11 @@
           <!-- Second Row -->
           <div class="package-card">
             <div class="package-image">
-              <img src="/images/beach.jpg" alt="East Coast Escape" />
+              <img
+                src="/images/beach.jpg"
+                alt="East Coast Escape"
+                loading="lazy"
+              />
               <div class="duration-badge">11 Days / 10 Nights</div>
             </div>
             <div class="package-content">
@@ -443,7 +492,7 @@
 
           <div class="package-card">
             <div class="package-image">
-              <img src="/images/Camping.jpg" alt="Camping" />
+              <img src="/images/Camping.jpg" alt="Camping" loading="lazy" />
               <div class="duration-badge">9 Days / 8 Nights</div>
             </div>
             <div class="package-content">
@@ -474,7 +523,11 @@
           <!-- Custom Package -->
           <div class="package-card">
             <div class="package-image">
-              <img src="/images/heritage.jpg" alt="Custom Adventure" />
+              <img
+                src="/images/heritage.jpg"
+                alt="Custom Adventure"
+                loading="lazy"
+              />
               <div class="duration-badge">Flexible Duration</div>
             </div>
             <div class="package-content">
@@ -529,6 +582,7 @@
               <img
                 src="/images/Tea Plucking 02.jpg"
                 alt="Sigiriya Rock Fortress"
+                loading="lazy"
               />
               <div class="slide-caption">
                 <h3>Heritage in Hand</h3>
@@ -536,7 +590,7 @@
               </div>
             </div>
             <div class="slide">
-              <img src="/images/img3.jpg" alt="Tropical Beach" />
+              <img src="/images/img3.jpg" alt="Tropical Beach" loading="lazy" />
               <div class="slide-caption">
                 <h3>Elephant Paradise</h3>
                 <p>
@@ -545,7 +599,11 @@
               </div>
             </div>
             <div class="slide">
-              <img src="/images/Watter Fall 02.jpg" alt="Tropical Beach" />
+              <img
+                src="/images/Watter Fall 02.jpg"
+                alt="Tropical Beach"
+                loading="lazy"
+              />
               <div class="slide-caption">
                 <h3>Cascading Wonder</h3>
                 <p>Majestic 63-meter waterfall.</p>
@@ -555,6 +613,7 @@
               <img
                 src="/images/Koggala Beach - Stilt Fishing.jpg"
                 alt="Wildlife"
+                loading="lazy"
               />
               <div class="slide-caption">
                 <h3>Ancient Tradition</h3>
@@ -564,7 +623,7 @@
               </div>
             </div>
             <div class="slide">
-              <img src="/images/img2.jpg" alt="Tropical Beach" />
+              <img src="/images/img2.jpg" alt="Tropical Beach" loading="lazy" />
               <div class="slide-caption">
                 <h3>Wild Encounters</h3>
                 <p>
@@ -573,7 +632,11 @@
               </div>
             </div>
             <div class="slide">
-              <img src="/images/Countryside - Fishing.jpg" alt="Wildlife" />
+              <img
+                src="/images/Countryside - Fishing.jpg"
+                alt="Wildlife"
+                loading="lazy"
+              />
               <div class="slide-caption">
                 <h3>Village Life</h3>
                 <p>Traditional fishing in Sri Lanka's inland waters</p>
