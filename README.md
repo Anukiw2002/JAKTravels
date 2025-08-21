@@ -1,12 +1,8 @@
 # JAK Travels - Authentic Sri Lankan Travel Experiences
 
-JAK Travels is a comprehensive travel agency website specializing in authentic Sri Lankan tourism experiences. We offer expertly curated tours featuring cultural heritage sites, wildlife safaris, pristine beaches, and mountain adventures with customized itineraries and local insights.
-
 ## Description
 
-JAK Travels is your gateway to discovering the vibrant heart of Sri Lanka. Our website provides a complete platform for travelers to explore and book immersive journeys that reveal the hidden treasures and timeless wonders of the beautiful island nation. From ancient cultural sites to pristine beaches, from misty mountains to wildlife sanctuaries, we curate experiences that capture the essence of Sri Lanka's magic.
-
-The website features a modern, responsive design with smooth animations, interactive elements, and comprehensive tour packages that cater to various travel preferences and budgets.
+JAK Travels is a comprehensive travel agency website specializing in authentic Sri Lankan tourism experiences. The website features a modern, responsive design with smooth animations, interactive elements, and comprehensive tour packages that cater to various travel preferences and budgets.
 
 ## Table of Contents
 - [Installation](#installation)
